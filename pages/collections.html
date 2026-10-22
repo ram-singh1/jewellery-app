@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop Fine Jewellery — Rings, Earrings, Necklaces &amp; Bracelets | Aurelle</title>
+  <meta name="description" content="Browse Aurelle fine gold jewellery. Filter by category, metal, purity, gemstone, price and occasion.">
+  <meta name="theme-color" content="#F8F5EF">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231E1B18'/%3E%3Ctext x='32' y='46' font-family='Didot,Bodoni 72,Georgia,serif' font-size='42' text-anchor='middle' fill='%23F8F5EF'%3EA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Instrument+Sans:wght@400..600&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-base="../" data-page="collection">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div data-include="header" style="height:112px"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol role="list"><li><a href="../index.html">Home</a></li><li aria-current="page" data-crumb>All jewellery</li></ol>
+        </nav>
+        <h1 data-title>All <em>jewellery</em></h1>
+        <p class="lead" data-intro>Solid gold pieces in 14K, 18K and 22K — each described with its metal, purity, dimensions and weight so you can choose with confidence.</p>
+        <div class="cat-pills" role="group" aria-label="Category">
+          <a class="chip" href="collections.html" data-cat-pill="">All</a>
+          <a class="chip" href="collections.html?cat=rings" data-cat-pill="rings">Rings</a>
+          <a class="chip" href="collections.html?cat=earrings" data-cat-pill="earrings">Earrings</a>
+          <a class="chip" href="collections.html?cat=necklaces" data-cat-pill="necklaces">Necklaces</a>
+          <a class="chip" href="collections.html?cat=bracelets" data-cat-pill="bracelets">Bracelets</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="container toolbar__inner">
+        <button class="toolbar__btn toolbar__btn--filter" type="button" aria-controls="filters" aria-expanded="false" data-open-filters>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+          Filter
+        </button>
+        <p class="toolbar__count" aria-live="polite" data-count></p>
+        <label class="select-wrap"><span class="muted">Sort</span>
+          <select data-sort aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="newest">Newest</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="container collection-layout">
+      <aside class="filters" id="filters" aria-label="Filters" data-filters>
+        <div class="filters__head">
+          <h2>Refine</h2>
+          <button class="icon-btn" type="button" aria-label="Close filters" data-close-filters><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+        </div>
+        <form data-filter-form>
+          <details class="filter-group" open>
+            <summary>Price</summary>
+            <div class="filter-group__body price-range">
+              <label for="max-price" class="small muted">Maximum price</label>
+              <input id="max-price" type="range" name="max" min="15000" max="190000" step="5000" value="190000">
+              <output for="max-price" data-price-out>Up to ₹1,90,000</output>
+            </div>
+          </details>
+          <details class="filter-group" open>
+            <summary>Metal</summary>
+            <div class="filter-group__body" data-facet="metal"></div>
+          </details>
+          <details class="filter-group" open>
+            <summary>Purity</summary>
+            <div class="filter-group__body" data-facet="purity"></div>
+          </details>
+          <details class="filter-group">
+            <summary>Stone</summary>
+            <div class="filter-group__body" data-facet="stone"></div>
+          </details>
+          <details class="filter-group">
+            <summary>Occasion</summary>
+            <div class="filter-group__body" data-facet="occasion"></div>
+          </details>
+          <details class="filter-group">
+            <summary>Availability</summary>
+            <div class="filter-group__body">
+              <label class="check"><input type="checkbox" name="instock" value="1"> Ready to ship</label>
+            </div>
+          </details>
+          <div class="filters__foot">
+            <button class="btn btn--outline" type="button" data-reset>Reset all</button>
+            <button class="btn btn--apply" type="button" data-close-filters>Show results</button>
+          </div>
+        </form>
+      </aside>
+
+      <section aria-label="Products">
+        <div class="active-filters" data-active></div>
+        <div class="product-grid product-grid--collection" data-grid>
+          <!-- Skeletons shown until products render -->
+          <div class="skeleton" style="aspect-ratio:4/5"></div><div class="skeleton" style="aspect-ratio:4/5"></div><div class="skeleton" style="aspect-ratio:4/5"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="overlay-scrim" data-filter-scrim style="z-index:215"></div>
+  <div data-include="footer"></div>
+
+  <script src="../js/products.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/collection.js"></script>
+</body>
+</html>
